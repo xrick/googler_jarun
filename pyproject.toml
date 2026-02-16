@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "googler-api"
+version = "0.1.0a1"
+description = "Python API for Google Search via googler"
+readme = "README.md"
+license = "GPL-3.0-only"
+requires-python = ">=3.8"
+keywords = ["google", "search", "api", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["googler_api*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
